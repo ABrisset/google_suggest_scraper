@@ -32,7 +32,7 @@ class SuggestScraper
   end
 
   def get_suggestions_from(query, lang, geo)
-    url = "https://www.google.com/complete/search?output=toolbar&hl=#{lang}&q=#{query}&gl=#{geo}&ie=utf-8"
+    url = "https://www.google.com/complete/search?output=toolbar&hl=#{lang}&q=#{query}&gl=#{geo}&ie=UTF-8"
     doc = open(url)
     xml = Nokogiri::XML(doc)
     suggestions = xml.xpath('//toplevel/CompleteSuggestion/suggestion/@data')

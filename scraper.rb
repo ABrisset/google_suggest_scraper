@@ -25,7 +25,7 @@ end
 ## Set q, hl and gl parameters
 query = options[:search_query]
 lang = options[:lang] ||= "fr"
-geo = options[:geo] ||= "fr"
+geo = options[:geo] ||= "FR"
 
 ## Get suggestions
 scraper = SuggestScraper.new(query, lang, geo)
