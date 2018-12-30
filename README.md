@@ -23,4 +23,4 @@ Enter a keyword and, optionaly, a language ("fr" is the default language). The t
 
 ## License
 
-Simple Backlink Check is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Google Suggests Scraper is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
