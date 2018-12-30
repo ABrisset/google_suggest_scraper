@@ -5,7 +5,7 @@ require 'cgi'
 require 'nokogiri'
 require 'open-uri'
 require 'optparse'
-require_relative "lib/suggest_scrapper"
+require_relative "lib/suggest_scraper"
 
 ## Add arguments requirements
 options = {}
