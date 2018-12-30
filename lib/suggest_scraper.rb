@@ -10,14 +10,14 @@ class SuggestScraper
 
   def process
     query = url_encode(@query)
-    suggestions = get_suggestions_from(query, @lang)
+    suggestions = get_suggestions_from(query, @lang, @geo)
     suggestions.each_with_index do |s, i|
       begin
         @results.push(s) unless @results.include?(s)
         next_suggestion = suggestions[i+1]
         unless next_suggestion.nil?
           @query = next_suggestion
-          next_suggestions = get_suggestions_from(url_encode(@query), @lang)
+          next_suggestions = get_suggestions_from(url_encode(@query), @lang, @geo)
           process if next_suggestions.count > 1
         end
       rescue => e
@@ -31,7 +31,7 @@ class SuggestScraper
     CGI::escape(string)
   end
 
-  def get_suggestions_from(query, lang)
+  def get_suggestions_from(query, lang, geo)
     url = "https://www.google.com/complete/search?output=toolbar&hl=#{lang}&q=#{query}&gl=#{geo}&ie=utf-8"
     doc = open(url)
     xml = Nokogiri::XML(doc)

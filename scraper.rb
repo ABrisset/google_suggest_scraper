@@ -11,7 +11,7 @@ require_relative "lib/suggest_scraper"
 options = {}
 OptionParser.new do |opts|
   opts.banner = "Usage: scraper.rb [options]"
-  opts.on('-q', '--query=QUERY', String) { |v| options[:search_query] = v }
+  opts.on('-q', '--query=QUERY', String) { |q| options[:search_query] = q }
   opts.on('-l', '--lang [LANG]', String) { |l| options[:lang] = l }
   opts.on('-g', '--geo [GEO]', String) { |g| options[:geo] = g }
 end.parse!
@@ -22,13 +22,13 @@ if options[:search_query].nil?
   options[:search_query] = gets.chomp
 end
 
-## Set query and lang
+## Set q, hl and gl parameters
 query = options[:search_query]
 lang = options[:lang] ||= "fr"
 geo = options[:geo] ||= "fr"
 
 ## Get suggestions
-scraper = SuggestScraper.new(query, lang)
+scraper = SuggestScraper.new(query, lang, geo)
 scraper.process
 results = scraper.results
 
