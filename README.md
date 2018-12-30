@@ -19,7 +19,7 @@ Options :
 - -q : keyword ("iphone" for example)
 - -l : language ("fr", "en", etc.)
 
-Enter a keyword and, optionaly, a language ("fr" is the default language). The tool will fetch all suggestions from Google Suggests and store them in a plan text file.
+Enter a keyword and, optionaly, a language ("fr" is the default language). The tool will fetch all suggestions from Google Suggest and store them in a plan text file.
 
 ## License
 
