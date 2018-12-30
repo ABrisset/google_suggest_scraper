@@ -24,7 +24,7 @@ Options :
 - -l : language ("fr", "en", etc.)
 - -g : location ("FR", "DE", etc.)
 
-Enter a keyword and, optionaly, a language ("fr" is the default language). The tool will fetch all suggestions from Google Suggest and store them in a plan text file.
+Enter a keyword and, optionaly, a language ("fr" is the default language) and/or a country ("FR" is the defaut location). The tool will fetch all suggestions from Google Suggest and store them in a plan text file.
 
 ## License
 
