@@ -9,8 +9,12 @@ Clone the repo or [download zip file](https://github.com/ABrisset/suggest_scrapp
 ## Server Requirements
 
 - Ruby 2.4.0
+- Nokogiri
 
 ## Usage
+
+Install the Nokogiri ruby gem via Bundler using `bundle install`. Then, just run :
+
 ```console
 ruby scraper.rb [options]
 ```
