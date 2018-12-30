@@ -1,9 +1,10 @@
 class SuggestScraper
   attr_accessor :query, :results
 
-  def initialize(query, lang)
+  def initialize(query, lang, geo)
     @query = query
     @lang = lang
+    @geo = geo
     @results = []
   end
 
@@ -31,7 +32,7 @@ class SuggestScraper
   end
 
   def get_suggestions_from(query, lang)
-    url = "https://www.google.com/complete/search?output=toolbar&hl=#{lang}&q=#{query}&ie=utf-8"
+    url = "https://www.google.com/complete/search?output=toolbar&hl=#{lang}&q=#{query}&gl=#{geo}&ie=utf-8"
     doc = open(url)
     xml = Nokogiri::XML(doc)
     suggestions = xml.xpath('//toplevel/CompleteSuggestion/suggestion/@data')
