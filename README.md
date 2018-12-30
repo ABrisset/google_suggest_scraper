@@ -1,6 +1,6 @@
-# Google Suggests Scraper
+# Google Suggest Scraper
 
-A Ruby command line to tool to scrape Google Suggests
+A Ruby command line to tool to scrape Google Suggest
 
 ## Installation
 
@@ -23,4 +23,4 @@ Enter a keyword and, optionaly, a language ("fr" is the default language). The t
 
 ## License
 
-Google Suggests Scraper is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Google Suggest Scraper is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
