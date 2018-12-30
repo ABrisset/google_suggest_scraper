@@ -13,6 +13,7 @@ OptionParser.new do |opts|
   opts.banner = "Usage: scraper.rb [options]"
   opts.on('-q', '--query=QUERY', String) { |v| options[:search_query] = v }
   opts.on('-l', '--lang [LANG]', String) { |l| options[:lang] = l }
+  opts.on('-g', '--geo [GEO]', String) { |g| options[:geo] = g }
 end.parse!
 
 ## Check if query is present
@@ -24,6 +25,7 @@ end
 ## Set query and lang
 query = options[:search_query]
 lang = options[:lang] ||= "fr"
+geo = options[:geo] ||= "fr"
 
 ## Get suggestions
 scraper = SuggestScraper.new(query, lang)
