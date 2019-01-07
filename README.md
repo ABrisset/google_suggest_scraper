@@ -26,6 +26,8 @@ Options :
 
 Enter a keyword and, optionaly, a language ("fr" is the default language) and/or a country ("FR" is the defaut location). The tool will fetch all suggestions from Google Suggest and store them in a plan text file.
 
+Maybe you will have to use proxies if the keyword you choose generate lots of suggestions, because Google is likely to ban your IP.
+
 ## License
 
 Google Suggest Scraper is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
